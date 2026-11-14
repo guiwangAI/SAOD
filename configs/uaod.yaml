@@ -1,0 +1,13 @@
+root: ../Dataset
+names:
+  0: truncated_cone
+  1: cone
+  2: sphere
+  3: cylinder
+modalities:
+  optical:
+    images: Optical Dataset/images
+    labels: Optical Dataset/labels
+  acoustic:
+    images: Acoustic Dataset/images
+    labels: Acoustic Dataset/labels
