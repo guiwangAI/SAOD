@@ -114,7 +114,7 @@ def main():
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--acoustic-loss-weight", type=float, default=0.1)
     parser.add_argument("--optical-prompt-loss-weight", type=float, default=0.05)
-    parser.add_argument("--sonar-dropout", type=float, default=0.05)
+    parser.add_argument("--sonar-dropout", type=float, default=0)
     parser.add_argument("--resume")
     parser.add_argument("--conf", type=float, default=0.25)
     parser.add_argument("--save-images", action="store_true")

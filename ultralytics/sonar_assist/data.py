@@ -196,7 +196,7 @@ class PairedYOLODataset(YOLODataset):
             raise ValueError("Joint directories must retain train/val/test names.")
         pairs = self.paired.pairs(split, allow_missing_acoustic=True, require_labels=False)
         self.acoustics = {str(pair.optical.resolve()): pair for pair in pairs}
-        self.dropout = float(data.get("assist_options", {}).get("dropout", 0.05))
+        self.dropout = float(data.get("assist_options", {}).get("dropout", 0))
         if not 0 <= self.dropout <= 1:
             raise ValueError("Acoustic dropout must be in [0, 1].")
         super().__init__(*args, data=dict(data, channels=3), **kwargs)
